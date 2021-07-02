@@ -2,7 +2,11 @@ import Digit from './Digit.js';
 
 export default () => {
 	const Display = document.createElement('div');
-	Display.append(Digit('2'));
-	Display.append(Digit('1'));
+
+	Display.classList.add('display');
+
+	Display.append(Digit('2', 'operand'));
+	Display.append(Digit('+', 'operator'));
+
 	return Display;
 };
