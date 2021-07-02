@@ -1,2 +1,6 @@
+@import 'global.css';
 @import 'config/variables.css';
+
+/* Components */
 @import 'App.css';
+@import 'Calculator/Digit.css'
