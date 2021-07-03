@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+* {
+  touch-action: manipulation;
+}
+
 html {
   font-size: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
