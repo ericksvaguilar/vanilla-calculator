@@ -1,50 +1,58 @@
 .button {
-  border: none;
-  border-radius: 3px;
-  background-color: var(--white);
-  box-shadow: var(--button-shadow);
-
-  height: 5rem;
-  font-size: 2rem;
-
-  display: flex;
+  /* Layout */
   align-items: center;
+  display: flex;
+  height: 5rem;
   justify-content: center;
 
+  /* Text */
+  font-size: 2rem;
+
+  /* Apperance */
+  background-color: var(--white);
+  box-shadow: var(--button-shadow);
   cursor: pointer;
-  user-select: none;
+  border: none;
+
+  /* Animation */
   transition: all 0.2s ease-out;
+
+  /* Other */
+  border-radius: 3px;
+  user-select: none;
 }
 
 @media (hover: hover) {
   .button:hover {
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: var(--button-shadow-hover);
     filter: brightness(0.98);
   }
 
   .button:active {
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: var(--button-shadow-active);
     filter: brightness(0.96);
   }
 }
 
 .button-operand {
-  background-color: #E6DCCB;
+  background-color: var(--button-operand-bg);
+  color: var(--button-color);
+
 }
 
 .button-operator {
-  background-color: #CAD7E6;
-  color: rgba(255, 255, 255, 0.753);
+  background-color: var(--button-operator-bg);
+  color: var(--button-color);
 }
 
 .button-equal {
-  background-color: #688099;
-  color: rgba(255, 255, 255, 0.753);
+  background-color: var(--button-equal-bg);
+  color: var(--button-color);
 }
 
 .button-clear {
-  background-color: #CAD7E6;
-  color: rgba(255, 255, 255, 0.753);
+  background-color: var(--button-clear-bg);
+  color: var(--button-color);
 }
 
 .button-span-2 {
