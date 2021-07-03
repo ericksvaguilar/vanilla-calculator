@@ -1,0 +1,6 @@
+.display {
+  box-shadow: var(--display-shadow);
+  border-radius: 3px;
+  padding: 1rem;
+  text-align: right;
+}
