@@ -7,6 +7,7 @@ export default () => {
 
 	Display.append(Digit('2', 'operand'));
 	Display.append(Digit('+', 'operator'));
+	Display.append(Digit('4', 'operand'));
 
 	return Display;
 };
