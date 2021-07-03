@@ -4,4 +4,6 @@
   padding: 1rem;
   text-align: right;
   height: 6rem;
+  background-color: var(--display-bg);
+  color: var(--display-color);
 }
