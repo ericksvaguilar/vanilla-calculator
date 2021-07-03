@@ -1,7 +1,8 @@
 .calculator {
   width: 100%;
   max-width: 37.5rem;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--calculator-shadow);
+  background-color: var(--calculator-bg);
   border-radius: 5px;
   padding: 1rem;
 
