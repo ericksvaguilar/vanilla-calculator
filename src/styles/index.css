@@ -3,4 +3,8 @@
 
 /* Components */
 @import 'App.css';
-@import 'Calculator/Digit.css'
+@import 'Calculator/Calculator.css';
+@import 'Calculator/Display.css';
+@import 'Calculator/Digit.css';
+@import 'Calculator/Keyboard.css';
+@import 'Calculator/Button.css';
