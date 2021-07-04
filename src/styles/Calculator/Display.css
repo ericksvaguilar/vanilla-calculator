@@ -6,4 +6,8 @@
   height: 6rem;
   background-color: var(--display-bg);
   color: var(--display-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
