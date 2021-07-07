@@ -6,9 +6,19 @@ const clickListener = createClickListener(document);
 
 clickListener.subscribe((clickedElement) => {
 	const isOperandClick = clickedElement.classList.contains('button-operand');
+	const isOperatorClick = clickedElement.classList.contains('button-operator');
+	const isClearClick = clickedElement.classList.contains('button-clear');
 
 	if (isOperandClick) {
 		calculator.appendNumbers(clickedElement.innerText);
+	}
+
+	if (isClearClick) {
+		calculator.clear();
+	}
+
+	if (isOperatorClick) {
+		calculator.setOperator(clickedElement.innerText);
 	}
 });
 
