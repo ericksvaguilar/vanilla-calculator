@@ -8,9 +8,7 @@ const createCalculator = () => {
 	const appendNumbers = (number) => {
 		const hasComma = number === '.' && state.currentOperand.includes('.');
 
-		if (hasComma) {
-			return;
-		}
+		if (hasComma) return;
 
 		state.currentOperand += number;
 	};
@@ -18,10 +16,22 @@ const createCalculator = () => {
 	const compute = () => {
 		const previous = parseFloat(state.previousOperand);
 		const current = parseFloat(state.currentOperand);
-		if (!previous || !current) return;
+
+		// if ((!state.operator && !previous) || (!state.operator && !current)) {
+		// 	return;
+		// }
+
+		if (!previous) {
+			state.previousOperand = current;
+			state.currentOperand = '';
+			return;
+		};
 
 		const operation = {
 			'+': () => previous + current,
+			'÷': () => previous / current,
+			'−': () => previous - current,
+			'×': () => previous * current,
 		};
 
 		const operationFunction = operation[state.operator];
@@ -30,6 +40,7 @@ const createCalculator = () => {
 
 		state.previousOperand = operationFunction();
 		state.currentOperand = '';
+
 	};
 
 	const setOperator = (operator) => {
@@ -44,7 +55,13 @@ const createCalculator = () => {
 		state.operator = '';
 	};
 
-	return { appendNumbers, state, clear, compute, setOperator };
+	return {
+		appendNumbers,
+		state,
+		clear,
+		compute,
+		setOperator
+	};
 };
 
 export default createCalculator;
